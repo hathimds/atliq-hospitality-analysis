@@ -1,46 +1,58 @@
-# 🏨 AtliQ Hospitality Project Report
-**Comprehensive Power BI Dashboard Analysis**  
-Prepared by: Hathim Manaf  
+# AtliQ Hospitality Performance Analysis
 
-## 📌 Project Overview
-Analyzed hotel performance across 24 properties in 4 cities (Delhi, Mumbai, Bangalore, Hyderabad) from May–July 2022.  
-Dashboard tracks ₹1.69B revenue, 132,939 bookings, and key hospitality KPIs.
+## Project Overview
+This project analyzes hotel performance data for AtliQ Hospitality to understand revenue drivers, occupancy trends, pricing efficiency, and booking behavior. The analysis is built using a star-schema data model and visualized in Power BI with structured reporting and business recommendations.
 
-## 📂 Data Scope
-- Time Period: May–July 2022  
-- Properties: 24 hotels  
-- Categories: Luxury (61.6% revenue) vs Business (38.4%)  
-- Metrics: Revenue, RevPAR, ADR, Occupancy %, Realisation %, Cancellation %, Ratings  
+## Business Objective
+AtliQ Hospitality aims to optimize revenue, pricing strategy, and operational efficiency by analyzing:
+- Revenue performance
+- Occupancy and demand trends
+- Pricing effectiveness (ADR, RevPAR)
+- Booking channel realization
+- Property-level benchmarking
 
-## 📊 Dashboard Design
-- KPIs: Revenue, RevPAR, ADR, Occupancy %, Realisation %, Cancellation %, Ratings  
-- Visuals: Revenue trends, property tables, category split, platform comparison  
-- Interactivity: Filters by city, property, room class, platform  
+## Dataset Description
+The dataset follows a data warehouse star schema:
 
-## 🔑 Key Insights
-- Luxury properties dominate with 61.6% of revenue.  
-- Weekends outperform weekdays (RevPAR ₹7,972 vs ₹7,083; Occupancy 62.6% vs 55.8%).  
-- Mumbai Exotica leads with ₹117M revenue and ADR ₹16,141.  
-- Direct offline bookings → highest ADR (₹12,794).  
-- Logtrip → best realisation (70.6%).  
-- Occupancy fluctuates 50–67%, peaking in July (weeks 27–29).  
+### Dimension Tables
+- `dim_date` – Date attributes
+- `dim_hotels` – Hotel and city information
+- `dim_rooms` – Room category and capacity
 
-## 🚀 Business Impact
-- Focus on Luxury properties in Mumbai and Bangalore.  
-- Lift weekday occupancy closer to weekend levels.  
-- Balance ADR gains with high‑realisation platforms.  
-- Reduce cancellations (~24–25%) and improve ratings (3.0–3.2 → target 3.5+).  
+### Fact Tables
+- `fact_bookings` – Individual booking records
+- `fact_aggregated_bookings` – Aggregated performance metrics
 
-## 🛠️ Tools & Skills
-- Power BI (data modeling, DAX, interactive dashboards)  
-- Hospitality KPIs (RevPAR, ADR, Occupancy, Realisation)  
-- Data storytelling & business intelligence  
+## Key KPIs
+- Revenue  
+- RevPAR (Revenue per Available Room)  
+- ADR (Average Daily Rate)  
+- Occupancy Percentage  
+- Realisation Percentage  
+- DSRN, DURN, DBRN  
+- Cancellation Rate  
+- Customer Ratings  
 
-## 🔮 Future Improvements
-- Forecasting models for occupancy and revenue  
-- Real‑time integration with booking platforms  
-- Customer segmentation for targeted marketing  
+## Key Insights
+- Luxury category contributes ~61.6% of total revenue, indicating premium segment dominance.
+- Weekends show higher occupancy and RevPAR compared to weekdays.
+- Certain properties outperform others in revenue and ratings, highlighting benchmarking opportunities.
+- Booking platforms show variation in ADR and realisation, impacting net revenue.
+- Occupancy fluctuates across weeks, suggesting demand-driven pricing opportunities.
 
-## ✅ Conclusion
-The dashboard provides actionable insights into AtliQ Hospitality’s performance, highlighting luxury dominance, weekend strength, city leaders, and platform differences.  
-Supports strategic decisions in **revenue management, operations, and customer experience**.
+## Business Recommendations
+- Expand premium (Luxury) segment offerings and optimize pricing strategies.
+- Introduce weekday promotions to improve occupancy.
+- Benchmark underperforming properties against top-performing hotels.
+- Optimize booking channel mix to improve realisation.
+- Implement dynamic pricing during high-demand periods.
+
+## Tools Used
+- Power BI  
+- Microsoft Excel  
+- CSV datasets (Data Warehouse Model)
+
+## Files
+- Dashboard
+- Report
+- Dataset
